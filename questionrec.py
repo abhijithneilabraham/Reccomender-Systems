@@ -12,4 +12,10 @@ q4=''
 q5=''
 q6=''
 q7=''
-
+import random
+id1=input()
+id2=input()
+id3=input()
+id4=input()
+id5=input()
+customer={1:id1,2:id2,3:id3,4:id4,5:id5}
