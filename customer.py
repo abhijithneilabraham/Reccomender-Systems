@@ -17,7 +17,18 @@ m=int(input())
 '''
 print(get_id(m))  
 '''
+rating=[]
 
+def get_rating():
+    print('enter the ratings in range 1 to 10')
+    for i in range(1,10):
+        
+        print('enter the rating for question%d'%(i))
+        a=int(input())
+        if a<=10 and a>0:           
+            rating.append(a)
+        else:
+            raise Exception('invalid rating.enter a value between 1 and 10')
+    return rating
 
-for i in range(10):
-    print('rating for question%d is=%d',i,int(input()))
+print(get_rating())
