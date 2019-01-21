@@ -17,7 +17,7 @@ id2=input()
 id3=input()
 id4=input()
 id5=input()
-def customer_details():
+
     
 customer={1:id1,2:id2a,3:id3,4:id4,5:id5}
 import random

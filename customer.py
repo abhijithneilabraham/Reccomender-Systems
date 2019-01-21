@@ -17,3 +17,7 @@ m=int(input())
 '''
 print(get_id(m))  
 '''
+
+
+for i in range(10):
+    print('rating for question%d is=%d',i,int(input()))
