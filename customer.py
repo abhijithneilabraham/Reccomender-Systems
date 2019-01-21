@@ -39,14 +39,16 @@ print(get_rating())
 print('enter the number of customers')
 m=int(input())
 def customer_details():
-    id=get_id()
+    id=get_id(m)
+    data=[]
     for customer in range(m):
         id_cust=id[customer]
         rat=get_rating()
         mf=random.randint(0,1)
-        csv_columns={'id','rating','M/F'}
-        with open('customer.csv','w',newline='') as csvfile:
-            writer=csv.writer(csvfile,delimiter=',')
+        data.append(id_cust,rating,mf)
+        return data
+print(customer_details())    
+        
             
         
         
