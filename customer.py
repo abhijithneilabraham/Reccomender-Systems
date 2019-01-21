@@ -7,6 +7,7 @@ Created on Mon Jan 21 23:13:07 2019
 """
 import csv
 import random
+import pandas as pd
 
 x=[]
 
@@ -44,6 +45,9 @@ def customer_details():
         rat=get_rating()
         mf=random.randint(0,1)
         csv_columns={'id','rating','M/F'}
+        with open('customer.csv','w',newline='') as csvfile:
+            writer=csv.writer(csvfile,delimiter=',')
+            
         
         
         
