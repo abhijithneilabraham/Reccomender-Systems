@@ -26,7 +26,7 @@ def get_rating():
     '''
     print('enter the ratings in range 1 to 10')#Let this print statement stay here for future uses when I dont use random numbers
     '''
-    for i in range(1,10):
+    for i in range(10):
         '''
         print('enter the rating for question%d'%(i))
         '''
@@ -45,13 +45,14 @@ def customer_details():
     id=get_id(m)
     data=[[]]
     mf=[]
+    rat=[]
     id_cust=[]
     for customer in range(m):
         id_cust.append(id[customer])
-        rat=get_rating()
+        rat.append(get_rating())
         mf.append(random.randint(0,1))
     
-    return id_cust ,rat,mf    
+    return  rat   
         
 print(customer_details())    
         
