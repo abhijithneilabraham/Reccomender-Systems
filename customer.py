@@ -5,9 +5,9 @@ Created on Mon Jan 21 23:13:07 2019
 
 @author: abhijithneilabraham
 """
-import csv
+
 import random
-import pandas as pd
+
 
 x=[]
 
@@ -41,22 +41,20 @@ print(get_rating())
 '''
 print('enter the number of customers')
 m=int(input())
-def customer_details():
-    id=get_id(m)
-    data=[[]]
-    mf=[]
-    rat=[]
-    id_cust=[]
-    for customer in range(m):
-        id_cust.append(id[customer])
-        rat.append(get_rating())
-        mf.append(random.randint(0,1))
-    
-    return  rat   
-        
-print(customer_details())    
-        
-            
+
+id=get_id(m)
+mf=[]
+rat=[]
+id_cust=[]
+for customer in range(m):
+    id_cust.append(id[customer]) #for getting array of customer id
+    rat.append(get_rating()) #for getting a full array of ratings with number of elements=10*number of customers
+    mf.append(random.randint(0,1)) #male or female random generator
+details=[id_cust,rat[0],mf]
+import csv
+with open("customerdataset.csv","w+") as my_csv:
+    csvWriter=csv.writer(my_csv,delimiter=',')
+    csvWriter.writerows(details)
         
         
         
