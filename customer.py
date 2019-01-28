@@ -60,19 +60,23 @@ with open("customerdataset.csv","w+") as my_csv:
     csvWriter.writerows(details)
 
 '''
-que=[]
-for i in range(r):
-    que.append('rating'+str(i+1))
     
 
 with open('names.csv', 'w') as csvfile:
-    fieldnames = ['id', 'rating','male_or_female']
+    fieldnames = ['id', 'male_or_female']
+    for _ in range(r):
+        fieldnames.append('question'+str(_+1))
+        
+            
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-
+    
     writer.writeheader()
     for i in range(m):
+        for v in range(r):
+            dic={'id':id[i],'male_or_female':random.randint(0,1)}
+            dic['question'+str(v+1)]=random.randint(1,10)
         
-        writer.writerow({'id': id_cust[i], 'rating':rat[i],'male_or_female':mf[i]})
+        writer.writerow(dic)
 '''
 wtr = csv.writer(open ('out.csv', 'w'), delimiter=',', lineterminator='\n')
 for x in id_cust : wtr.writerow ([x])   
