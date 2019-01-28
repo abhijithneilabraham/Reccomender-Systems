@@ -60,6 +60,10 @@ with open("customerdataset.csv","w+") as my_csv:
     csvWriter.writerows(details)
 
 '''
+que=[]
+for i in range(10):
+    que.append('rating'+str(i))
+print(que)    
 
 with open('names.csv', 'w') as csvfile:
     fieldnames = ['id', 'rating','male_or_female']
