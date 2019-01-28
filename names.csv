@@ -1,6 +1,5 @@
-id,male_or_female,question1,question2,question3,question4,question5,question6,question7,question8,question9,question10,question11,question12,question13,question14,question15,question16,question17,question18,question19,question20
-1,0,,,,,,,,,,,,,,,,,,,,3
-2,1,,,,,,,,,,,,,,,,,,,,8
-3,1,,,,,,,,,,,,,,,,,,,,4
-4,1,,,,,,,,,,,,,,,,,,,,2
-5,1,,,,,,,,,,,,,,,,,,,,8
+id,male_or_female,question1,question2,question3,question4,question5,question6,question7,question8,question9,question10
+1,1,8,4,1,6,4,10,9,5,4,6
+2,1,2,8,8,7,2,5,10,6,3,1
+3,0,3,8,9,10,6,1,9,2,4,6
+4,0,9,5,8,8,2,2,1,9,6,2

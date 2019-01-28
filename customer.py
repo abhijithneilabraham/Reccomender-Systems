@@ -45,13 +45,6 @@ m=int(input())
 id=get_id(m)
 mf=[]
 rat=[]
-id_cust=[]
-for customer in range(m):
-     #for getting array of customer id.mulitplied by 10 to match with the column of ratings
-    
-    rat.append(rating) #for getting a full array of ratings with number of elements=10*number of customers
-    mf.append([random.randint(0,1)]*10) #male or female random generator
-print(id_cust,mf,rat)
 
 import csv
 '''
@@ -67,14 +60,17 @@ with open('names.csv', 'w') as csvfile:
     for _ in range(r):
         fieldnames.append('question'+str(_+1))
         
-            
+    print(fieldnames)       
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     
     writer.writeheader()
     for i in range(m):
+        dic={'id':id[i],'male_or_female':random.randint(0,1)}
         for v in range(r):
-            dic={'id':id[i],'male_or_female':random.randint(0,1)}
-            dic['question'+str(v+1)]=random.randint(1,10)
+            
+            
+            dic2={'question'+str(v+1):random.randint(1,10)}
+            dic.update(dic2)
         
         writer.writerow(dic)
 '''
