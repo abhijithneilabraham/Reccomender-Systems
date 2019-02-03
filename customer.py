@@ -14,7 +14,7 @@ x=[]
 def get_id(n):
     print('enter all the customer ids')
     for i in range (n):
-        x.append(input())
+        x.append(i)
     return x
 
 '''
