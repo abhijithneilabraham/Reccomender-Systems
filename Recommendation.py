@@ -10,8 +10,14 @@ from surprise import SVD
 from surprise import Dataset
 from surprise.model_selection import cross_validate
 from surprise import Reader
+import pandas as pd
+customer=pd.read_csv('names.csv')
 
-reader = Reader(line_format='user item rating', sep=' ', skip_lines=3, rating_scale=(1, 5))
+reader = Reader(rating_scale=(1, 5))
+fieldnames = ['id', 'male_or_female']
+for i in range(25):
+    fieldnames.append('question'+str(i+1))
+data = Dataset.load_from_df(customer[fieldnames], reader)
 
 data=Dataset.load_from_file('names.csv',reader=reader)
 algo=SVD() #using the SVD algorithm
