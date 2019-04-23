@@ -27,3 +27,6 @@ for i in range(25):
    
     algo = KNNBasic()
     algo.fit(trainset)
+    uid=str(12)
+    iid=str(0)
+    pred=algo.predict(uid,iid,r_ui=None,verbose=True)
